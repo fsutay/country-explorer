@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
-import Layout from './components/layout';
-import { useQuery } from '@apollo/client';
-import { useDispatch } from 'react-redux';
-import { addCountry,setLoading } from './store/country-slice';
-import { getCountries } from './service/service';
+import React, { useEffect } from "react";
+import Layout from "./components/layout";
+import { useQuery } from "@apollo/client";
+import { useDispatch } from "react-redux";
+import { addCountry, setLoading } from "./store/country-slice";
+import { getCountries } from "./service/service";
 
 function App() {
   const dispatch = useDispatch();

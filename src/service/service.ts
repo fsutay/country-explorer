@@ -1,20 +1,21 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const getCountries = gql`
-query CountriesQuery {
-  countries {
-    code
-    name
-    emoji
-    continent {
+  query CountriesQuery {
+    countries {
+      code
       name
-      countries {
-        code
+      emoji
+      continent {
         name
+        countries {
+          code
+          name
+        }
       }
     }
   }
-}`
+`;
 
 export const searchCountries = gql`
   query CountriesQuery($searchText: String) {
